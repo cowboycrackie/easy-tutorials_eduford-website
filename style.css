@@ -54,6 +54,24 @@ img {
   margin-bottom: 10px;
 }
 
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color-white);
+  border: 1px solid var(--text-color-white);
+  padding: 12px 34px;
+  font-size: 1.2rem;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: 1px solid var(--brand-red);
+  background: var(--brand-red);
+  transition: 0.5s ease;
+}
+
 /* header section */
 #header {
   min-height: 100vh;
@@ -132,23 +150,6 @@ img {
   color: var(--text-color-white);
 }
 
-#header .header .text-box .hero-btn {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--text-color-white);
-  border: 1px solid var(--text-color-white);
-  padding: 12px 34px;
-  font-size: 1.2rem;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-}
-
-#header .header .text-box .hero-btn:hover {
-  border: 1px solid var(--brand-red);
-  background: var(--brand-red);
-  transition: 0.5s ease;
-}
 /* course section */
 #course .course {
   width: 80%;
@@ -269,7 +270,6 @@ img {
   flex-basis: 31%;
   margin: 1.5%;
   border-radius: 10px;
-  margin-bottom: 5%;
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -302,6 +302,10 @@ img {
   padding-top: 100px;
 }
 
+#testimonials .testimonials .testimonials-bottom {
+  margin-top: 5%;
+}
+
 #testimonials .testimonials .testimonials-bottom .testimonials-list {
   display: flex;
 }
@@ -310,7 +314,6 @@ img {
   flex-basis: 45%;
   margin: 2.5%;
   border-radius: 10px;
-  margin-bottom: 5%;
   text-align: left;
   background: var(--brand-red-light);
   padding: 25px;
@@ -344,8 +347,72 @@ img {
 }
 
 /* contact section */
+#contact .contact {
+  width: 80%;
+  margin: 100px auto;
+  background-image: linear-gradient(var(--header-overlay), var(--header-overlay)), url(./images/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+#contact .contact h1 {
+  color: var(--text-color-white);
+  margin-bottom: 40px;
+  padding: 0;
+}
 
 /* footer section */
+#footer .footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#footer .footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+#footer .footer .social-icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+#footer .footer .social-icons .icon {
+  width: 15px;
+  margin: 0 20px;
+  
+}
+
+#footer .footer .social-icons .social-item .socials-color {
+  filter: invert(35%) sepia(80%) saturate(3538%) hue-rotate(343deg) brightness(100%) contrast(92%);
+}
+
+#footer .footer .social-item {
+  transition: 0.3s ease;
+  transition-property: transform, filter;
+}
+
+#footer .footer .social-item:hover {
+  transform: scale(1.2);
+  filter: brightness(1) invert(0);
+}
+
+#footer .footer .social-item:hover img {
+  filter: brightness(1) invert(0);
+}
+
+#footer .footer p .fa {
+  color: var(--brand-red);
+}
 
 /* media queries */
 @media only screen and (max-width:768px) {
@@ -394,7 +461,10 @@ img {
     transition: 0.5s ease right;
   }
 
-  #course .course .courses-bottom {
+  #course .course .courses-bottom, 
+  #campus .campus .campuses-bottom, 
+  #facilities .facilities .facilities-list,
+  #testimonials .testimonials .testimonials-list {
     flex-direction: column;
   }
 
@@ -407,6 +477,22 @@ img {
     margin-right: 15px;
     float: left;
   }
+
+  #contact .contact {
+    padding: 50px 0;
+  }
+
+  #contact .contact h1 {
+    font-size: 0.8rem;
+  }
+
+  #footer .footer .social-icons {
+    margin: 10px 0;
+  }
+
+  #footer .footer .social-icons .icon {
+  width: 20px;
+}
 }
 
 /* keyframes */
