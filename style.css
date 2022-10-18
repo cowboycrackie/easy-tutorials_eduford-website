@@ -11,23 +11,37 @@
 /* variables & global styles */
 :root {
   --header-overlay: rgba(4,9,30,0.7);
-  --text-color: white;
+  --text-color-white: white;
+  --text-color-black: black;
   --brand-red: #f44336;
+  --brand-red-light: #fff3f3;
+  --box-shadow: rgba(0,0,0,0.2);
 }
 
 html {
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   overflow-x: hidden;
 }
 
-.container {
-  width: 100%;
+p {
+  font-size: 0.7rem;
 }
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.container {
+}
+
 
 /* header section */
 #header {
@@ -50,12 +64,9 @@ body {
   display: none;
 }
 
-#header .header nav .close-icon {
-  padding: 7.5px 22.5px;
-}
-
 #header .header nav img {
   width: 150px;
+  padding-top: 10px;
 }
 
 #header .header nav .nav-list {
@@ -86,13 +97,13 @@ body {
 
 #header .header nav .nav-list ul li a {
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--text-color-white);
   text-decoration: none;
 }
 
 #header .header .text-box {
   width: 90%;
-  color: var(--text-color);
+  color: var(--text-color-white);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -107,14 +118,14 @@ body {
 #header .header .text-box p {
   font-size: 0.7rem;
   margin: 10px 0 40px 0;
-  color: var(--text-color);
+  color: var(--text-color-white);
 }
 
 #header .header .text-box .hero-btn {
   display: inline-block;
   text-decoration: none;
-  color: var(--text-color);
-  border: 1px solid var(--text-color);
+  color: var(--text-color-white);
+  border: 1px solid var(--text-color-white);
   padding: 12px 34px;
   font-size: 1.2rem;
   background: transparent;
@@ -127,21 +138,77 @@ body {
   background: var(--brand-red);
   transition: 0.5s ease;
 }
+/* course section */
+#course .course {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#course .course .courses-top h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#course .course .courses-top p {
+  color: var(--text-color-black);
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+#course .course .courses-bottom {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#course .course .courses-bottom .course-item {
+  flex-basis: 31%;
+  margin: 1.5%;
+  background: var(--brand-red-light);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s ease box-shadow;
+}
+
+#course .course .courses-bottom .course-item:hover {
+  box-shadow: 0 0 20px var(--box-shadow);
+}
+
+/* campus section */
+#campus .campus {
+  width: 80%;
+  margin: auto;
+}
+
 /* footer section */
 
 /* media queries */
 @media only screen and (max-width:768px) {
   #header .header nav .fa {
     display: block;
-    color: var(--text-color);
-    margin: 10px;
+    color: var(--text-color-white);
+    margin: 20px 10px 10px 10px;
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  #header .header nav img {
+    padding-top: 20px;
   }
 
   #header .header nav .fa-xmark {
     font-size: 1.7rem;
     text-align: right;
+  }
+
+  #header .header nav .close-icon {
+    padding: 7.5px 22.5px;
   }
 
   #header .header .text-box h1 {
@@ -167,6 +234,10 @@ body {
     z-index: 10;
     transition: 0.5s ease right;
   }
+
+  #course .course .courses-bottom {
+    flex-direction: column;
+  }  
 }
 
 /* keyframes */
