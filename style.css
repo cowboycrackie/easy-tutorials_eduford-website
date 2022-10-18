@@ -1,4 +1,5 @@
 /* imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
 
 /* browser reset */
 * {
@@ -8,18 +9,134 @@
 }
 
 /* variables & global styles */
-/* :root {
-  
-} */
+:root {
+  --header-overlay: rgba(4,9,30,0.7);
+  --text-color: white;
+  --brand-red: #f44336;
+}
 
-/* html {
-  
-} */
+html {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+}
 
 /* header section */
+#header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(var(--header-overlay), var(--header-overlay)), url(./images/banner.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
 
+#header .header nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .header nav img {
+  width: 150px;
+}
+
+#header .header nav .nav-list {
+  flex: 1;
+  text-align: right;
+}
+
+#header .header nav .nav-list ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+#header .header nav .nav-list ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--brand-red);
+  display: block;
+  margin: auto;
+  transition: 0.5s ease width;
+}
+
+#header .header nav .nav-list ul li:hover::after {
+  width: 100%;
+}
+
+#header .header nav .nav-list ul li a {
+  font-size: 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#header .header .text-box {
+  width: 90%;
+  color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#header .header .text-box h1 {
+  font-size: 2.5rem;
+}
+
+#header .header .text-box p {
+  font-size: 0.7rem;
+  margin: 10px 0 40px 0;
+  color: var(--text-color);
+}
+
+#header .header .text-box .hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 12px 34px;
+  font-size: 1.2rem;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+#header .header .text-box .hero-btn:hover {
+  border: 1px solid var(--brand-red);
+  background: var(--brand-red);
+  transition: 0.5s ease;
+}
 /* footer section */
 
 /* media queries */
+@media only screen and (max-width:768px) {
+  #header .header .text-box h1 {
+    font-size: 1.5rem;
+  }
+
+  #header .header nav .nav-list ul li {
+    display: block;
+  }
+
+  #header .header nav .nav-list {
+    position: absolute;
+    background: var(--brand-red);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 10;
+  }
+}
 
 /* keyframes */
