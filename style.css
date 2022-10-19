@@ -46,6 +46,7 @@ img {
 }
 
 .container {
+  min-height: 100%;
 }
 
 .section-title {
@@ -71,6 +72,8 @@ img {
   background: var(--brand-red);
   transition: 0.5s ease;
 }
+
+/* index page */
 
 /* header section */
 #header {
@@ -429,6 +432,60 @@ img {
   color: var(--brand-red);
 }
 
+/* about us page */
+.about-us-header {
+  min-height: 50vh !important;
+  width: 100%;
+  background-image: linear-gradient(var(--header-overlay), var(--header-overlay)), url(./images/background.jpg) !important;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: var(--text-color-white);
+}
+
+.about-us-header h1 {
+  margin-top: 110px;
+}
+
+#about-us .about-us {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+#about-us .about-us .about-us-content {
+  display: flex;
+}
+
+#about-us .about-us .about-us-content .about-us-item {
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+
+#about-us .about-us .about-us-content .about-us-item h1 {
+  padding-top: 0;
+}
+
+#about-us .about-us .about-us-content .about-us-item p {
+  padding: 10px 0;
+}
+
+#about-us .about-us .about-us-content .about-us-item img {
+  width: 100%;
+}
+
+#about-us .about-us .about-us-content .about-us-item .red-btn {
+  margin-top: 20px;
+  border: 1px solid var(--brand-red);
+  background: transparent;
+  color: var(--brand-red);
+}
+
+#about-us .about-us .about-us-content .about-us-item .red-btn:hover {
+  background-color: var(--brand-red);
+  color: var(--text-color-white);
+}
+
 /* media queries */
 @media only screen and (max-width:768px) {
   #header .header nav .fa {
@@ -479,7 +536,8 @@ img {
   #course .course .courses-bottom, 
   #campus .campus .campuses-bottom, 
   #facilities .facilities .facilities-list,
-  #testimonials .testimonials .testimonials-list {
+  #testimonials .testimonials .testimonials-list,
+  #about-us .about-us .about-us-content {
     flex-direction: column;
   }
 
