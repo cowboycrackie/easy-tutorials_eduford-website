@@ -388,6 +388,7 @@ img {
   width: 100%;
   text-align: center;
   padding: 30px 0;
+  padding-top: 100px;
 }
 
 #footer .footer h4 {
@@ -408,10 +409,10 @@ img {
 #footer .footer .social-icons .icon {
   width: 15px;
   margin: 0 20px;
-  
 }
 
-#footer .footer .social-icons .social-item .socials-color {
+#footer .footer .social-icons .social-item .socials-color,
+#contact-us .contact-us .contact-items .contact-left .socials-color {
   filter: invert(35%) sepia(80%) saturate(3538%) hue-rotate(343deg) brightness(100%) contrast(92%);
 }
 
@@ -475,14 +476,16 @@ img {
   width: 100%;
 }
 
-#about-us .about-us .about-us-content .about-us-item .red-btn {
+#about-us .about-us .about-us-content .about-us-item .red-btn,
+#contact-us .contact-us .contact-items .contact-right form .red-btn {
   margin-top: 20px;
   border: 1px solid var(--brand-red);
   background: transparent;
   color: var(--brand-red);
 }
 
-#about-us .about-us .about-us-content .about-us-item .red-btn:hover {
+#about-us .about-us .about-us-content .about-us-item .red-btn:hover,
+#contact-us .contact-us .contact-items .contact-right form .red-btn:hover {
   background-color: var(--brand-red);
   color: var(--text-color-white);
 }
@@ -539,6 +542,67 @@ img {
   box-sizing: border-box;
 }
 
+/* contact page */
+#contact-us .contact-us {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+}
+
+#contact-us .contact-us iframe {
+  width: 100%;
+}
+
+#contact-us .contact-us .contact-items {
+  padding-top: 100px;
+  display: flex;
+}
+
+#contact-us .contact-us .contact-items .contact-left img {
+  width: 25px;
+  height: auto;
+  margin: 10px 30px 10px 10px;
+}
+
+#contact-us .contact-us .contact-items .contact-left {
+  flex-basis: 48%;
+  min-width: 48%;
+  margin-bottom: 30px;
+}
+
+#contact-us .contact-us .contact-items .contact-left div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#contact-us .contact-us .contact-items .contact-left div p {
+  padding: 0;
+  color: var(--blog-text-color);
+}
+
+#contact-us .contact-us .contact-items .contact-left div h5 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: var(--blog-text-color);
+}
+
+#contact-us .contact-us .contact-items .contact-right input,
+#contact-us .contact-us .contact-items .contact-right textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid var(--blog-text-color);
+  box-sizing: border-box;
+}
+
+#contact-us .contact-us .contact-items .contact-right form input, 
+#contact-us .contact-us .contact-items .contact-right form textarea, 
+#contact-us .contact-us .contact-items .contact-right form button {
+  font-family: "Poppins", sans-serif;
+}
 
 /* media queries */
 @media only screen and (max-width:768px) {
@@ -591,7 +655,8 @@ img {
   #campus .campus .campuses-bottom, 
   #facilities .facilities .facilities-list,
   #testimonials .testimonials .testimonials-list,
-  #about-us .about-us .about-us-content {
+  #about-us .about-us .about-us-content,
+  #contact-us .contact-us .contact-items {
     flex-direction: column;
   }
 
@@ -628,6 +693,12 @@ img {
   #blog .blog .blog-content .blog-right{
     margin-left: 0;
     margin-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width:920px) {
+  #contact-us .contact-us .contact-items {
+    flex-direction: column;
   }
 }
 
