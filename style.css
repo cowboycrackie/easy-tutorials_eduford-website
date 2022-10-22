@@ -13,6 +13,7 @@
   --header-overlay: rgba(4,9,30,0.7);
   --text-color-white: white;
   --text-color-black: black;
+  --blog-text-color: #737373;
   --brand-red: #f44336;
   --brand-red-overlay: rgba(244, 67, 54, 0.7);
   --brand-red-light: #fff3f3;
@@ -486,6 +487,59 @@ img {
   color: var(--text-color-white);
 }
 
+/* blog page */
+#blog .blog {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+}
+
+#blog .blog .blog-content {
+  display: flex;
+}
+
+#blog .blog .blog-content .blog-left {
+  flex-basis: 65%;
+}
+
+#blog .blog .blog-content .blog-left img {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+#blog .blog .blog-content .blog-left h2 {
+  color: var(--text-color-black);
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+#blog .blog .blog-content .blog-left p {
+  color: var(--blog-text-color);
+  padding: 0;
+}
+
+#blog .blog .blog-content .blog-right {
+  flex-basis: 32%;
+  margin-left: 50px;
+}
+
+#blog .blog .blog-content .blog-right h3 {
+  background: var(--brand-red);
+  color: var(--text-color-white);
+  padding: 7px 0;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#blog .blog .blog-content .blog-right .post-category-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+
 /* media queries */
 @media only screen and (max-width:768px) {
   #header .header nav .fa {
@@ -541,6 +595,10 @@ img {
     flex-direction: column;
   }
 
+  #blog .blog .blog-content {
+    flex-direction: column-reverse;
+  }
+
   #testimonials .testimonials .testimonials-bottom .testimonials-list .testimonial-item {
     display: inline-block;
   }
@@ -565,7 +623,12 @@ img {
 
   #footer .footer .social-icons .icon {
   width: 20px;
-}
+  }
+
+  #blog .blog .blog-content .blog-right{
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
 }
 
 /* keyframes */
